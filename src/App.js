@@ -27,7 +27,10 @@ export default function App() {
   function emojiInputHandler(event) {
     //console.log(event.target.value);
     //setUserInput(event.target.value);
-
+    
+    
+    // target gives you the element that triggered the event.
+    // value retrieves the value of that element (an input field here).
     var userInput = event.target.value;
 
     var meaning = emojiDictionary[userInput];
