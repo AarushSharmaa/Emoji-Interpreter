@@ -12,7 +12,13 @@ const emojiDictionary = {
   "😔": "sad",
   "🥡": "takeout box",
   "❤️": "love",
-  "😑": "annoyance"
+  "😑": "annoyance",
+  "❌": "nahi bana kaam",
+  "👽": "alien",
+  "💻": "laptop",
+  "😈": "angry",
+  "🐧": "penguin",
+  "🕸": "spider web",
   // add more emojis
 };
 
@@ -27,8 +33,7 @@ export default function App() {
   function emojiInputHandler(event) {
     //console.log(event.target.value);
     //setUserInput(event.target.value);
-    
-    
+
     // target gives you the element that triggered the event.
     // value retrieves the value of that element (an input field here).
     var userInput = event.target.value;
@@ -36,7 +41,8 @@ export default function App() {
     var meaning = emojiDictionary[userInput];
 
     if (meaning === undefined) {
-      meaning = "We don't have this in our database";
+      meaning =
+        "We don't have this in our database. Contact the creator for adding it.";
     }
 
     //console.log(meaning); //to give in console
@@ -72,6 +78,8 @@ export default function App() {
           </span>
         );
       })}
+
+      <footer> Web Developer | Aarush Sharma </footer>
     </div>
   );
 }
